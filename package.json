@@ -1,0 +1,15 @@
+{
+  "name" : "lesson9-10-mvc",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node --watch app.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-handlebars": "^8.0.3",
+    "handlebars": "^4.7.9",
+    "mongoose": "^9.7.0"
+  }
+}
