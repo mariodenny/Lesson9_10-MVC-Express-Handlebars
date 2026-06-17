@@ -1,3 +1,4 @@
+import Biodata from "../models/BiodataModels.js"
 export const indexPage = (req,res) =>{
     res.render("index", {
         username : "mariodenny",
@@ -10,3 +11,7 @@ export const aboutPage = (req, res) =>{
         message : "This about also come from controller!"
     })
 }
+
+export const biodataPage = (req,res) =>{
+    res.render("biodata")
+} 
