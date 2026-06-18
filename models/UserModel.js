@@ -29,11 +29,9 @@ const UserSchema = new mongoose.Schema({
 }
 )
 // fungsi untuk hash password saat register
-UserSchema.pre('save', async function(next){
-    if(!this.isModified('password')) return next()
+UserSchema.pre('save', async function(){
     const salt = await bcrypt.genSalt(10)
     this.password = await bcrypt.hash(this.password,salt)
-    next()
 })
 // fungsi compare plain text dengan password hash
 UserSchema.methods.comparePassword = async function(candiDatePassword){

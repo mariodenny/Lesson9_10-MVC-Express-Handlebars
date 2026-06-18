@@ -2,7 +2,7 @@
     <div class="col-md-6">
         <div class="card shadow-sm">
             <div class="card-header bg-success text-white text-center py-3">
-                <h5>Create new Account</h5>
+                <h5>Login to your existed accounts</h5>
             </div>
             <div class="card-body p-4">
                 {{#if error }}
@@ -10,7 +10,7 @@
                     <span>{{error}}</span>
                 </div>
                 {{/if }}
-                <form action="/auth/register" method="post">
+                <form action="/auth/login" method="post">
                     <div class="mb-3">
                         <label for="email" class="form-label">Email address</label>
                         <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
@@ -21,12 +21,7 @@
                         <input type="password" class="form-control" id="password" name="password" aria-describedby="passwordHelp">
                         <div id="passwordHelp" class="form-text">Use mix number and strong word to make your password</div>
                     </div>
-                    <div class="mb-3">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" name="username" class="form-control" aria-describedby="usernameHelp">
-                        <div id="usernameHelp" class="form-text">Your username, dont use realname, dont use sensitive username</div>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100">Submit</button>
+                    <button type="submit" class="btn btn-success w-100">Login</button>
                 </form>
             </div>
         </div>
